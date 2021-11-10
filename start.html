@@ -9,21 +9,21 @@
 
 <div class="panels">
     <div class="panel header">
-      <p class="icon">icon</p>
-      <p class="link">eva</p>
-      <p class="link">berserk</p>
-      <p class="link">madoka</p>
+      <img src="https://i.ytimg.com/an/WI0RTUeHToo/14445225582978038863_mq.jpg?v=6010c1d7" alt="asuka">
+      <a class="link" href="#nge">eva</a>
+      <a class="link" href="#berserk">berserk</a>
+      <a class="link" href="#madoka">madoka</a>
     </div>
     <div class="panel gallery">
       <p>gallery</p>
     </div>
-    <div class="panel nge">
+    <div class="panel nge" id="nge">
       <p>nge</p>
     </div>
-    <div class="panel berserk">
+    <div class="panel berserk" id="berserk">
       <p>berserk</p>
     </div>
-    <div class="panel madoka">
+    <div class="panel madoka" id="madoka">
       <p>madoka</p>
     </div>
 
@@ -52,11 +52,16 @@ body {
 
 .panel {
   flex: 4;
-  border: 10px;
   text-align: center;
   align-items: center;
   justify-content: center;
   display: flex;
+}
+
+.panel p {
+  font-size: 40px;
+  color: yellow;
+  font-weight: bold;
 }
 .header {
   flex: 1;
@@ -69,8 +74,10 @@ body {
   flex: 2;
 }
 
-.header .icon {
-  flex: 1 1 auto;
+.header img {
+  width: 200px;
+  height: 200px;
+  flex 1;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -88,7 +95,7 @@ body {
 
 .berserk {
   background: url(https://wallpaperaccess.com/full/3896663.jpg);
-  
+
 }
 
 .madoka {
