@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Anime Page</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+
+<div class="panels">
+    <div class="panel header">
+      <p class="icon">icon</p>
+      <p class="link">eva</p>
+      <p class="link">berserk</p>
+      <p class="link">madoka</p>
+    </div>
+    <div class="panel gallery">
+      <p>gallery</p>
+    </div>
+    <div class="panel nge">
+      <p>nge</p>
+    </div>
+    <div class="panel berserk">
+      <p>berserk</p>
+    </div>
+    <div class="panel madoka">
+      <p>madoka</p>
+    </div>
+
+<style>
+
+html {
+  font-size: 15px;
+  background-size: cover;
+  box-sizing: border-box;
+  font-family: 'helvetica neue';
+  font-size: 20px;
+  font-weight: 200;
+}
+
+body {
+      margin: 0;
+    }
+
+
+.panels {
+      min-height: 150vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+.panel {
+  flex: 4;
+  border: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.header {
+  flex: 1;
+  background-color: #DDCEFF;
+  display: flex;
+  flex-direction: row;
+ }
+
+.header .link {
+  flex: 2;
+}
+
+.header .icon {
+  flex: 1 1 auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.gallery {
+   background-color: #D6E1F4;
+ }
+
+.nge {
+  background: url(https://pbs.twimg.com/media/DVNmD4VXcAEZfQE?format=jpg&name=medium);
+}
+
+.berserk {
+  background: url(https://wallpaperaccess.com/full/3896663.jpg);
+  
+}
+
+.madoka {
+  background: url(https://i0.wp.com/www.nerdophiles.com/wp-content/uploads/2015/05/Witch.png);
+}
+
+</style>
+
+</body>
+</html>
