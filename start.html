@@ -1,108 +1,81 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>Anime Page</title>
-  <!-- <link rel="stylesheet" href="style.css"> -->
-</head>
-<body>
 
-<div class="panels">
-    <div class="panel header">
-      <img src="https://i.ytimg.com/an/WI0RTUeHToo/14445225582978038863_mq.jpg?v=6010c1d7" alt="asuka">
-      <a class="link" href="#nge">eva</a>
-      <a class="link" href="#berserk">berserk</a>
-      <a class="link" href="#madoka">madoka</a>
+  <head>
+    <meta charset="UTF-8">
+    <title>Anime Page</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <header class="header">
+        <div class ="icon">
+          <img src="https://i.ytimg.com/an/WI0RTUeHToo/14445225582978038863_mq.jpg?v=6010c1d7" alt="asuka">
+        </div>
+        <div class ="links">
+          <a href="#nge">eva</a>
+        </div>
+        <div class ="links">
+          <a href="#berserk">berserk</a>
+        </div>
+        <div class ="links">
+          <a href="#madoka">madoka</a>
+        </div>
+      </header>
+
+      <div class="box">
+
+        <section class="panel" id="gallery">
+          <h1>gallery</h1>
+          <p>asdf ghjkl</p>
+        </section>
+
+        <section class="panel" id="berserk">
+          <h1>Berserk</h1>
+          <p>asdf ghjkl</p>
+        </section>
+
+        <section class="panel" id="nge">
+          <h1>Neon Genesis Evangelion</h1>
+          <p>asdf ghjkl</p>
+        </section>
+
+        <section class="panel" id="madoka">
+          <h1>Puella Magi Madoka Magica</h1>
+          <p>asdf ghjkl</p>
+        </section>
+
+      </div>
     </div>
-    <div class="panel gallery">
-      <p>gallery</p>
-    </div>
-    <div class="panel nge" id="nge">
-      <p>nge</p>
-    </div>
-    <div class="panel berserk" id="berserk">
-      <p>berserk</p>
-    </div>
-    <div class="panel madoka" id="madoka">
-      <p>madoka</p>
-    </div>
 
-<style>
+    <style>
 
-html {
-  font-size: 15px;
-  background-size: cover;
-  box-sizing: border-box;
-  font-family: 'helvetica neue';
-  font-size: 20px;
-  font-weight: 200;
-}
-
-body {
-      margin: 0;
-    }
-
-
-.panels {
-      min-height: 150vh;
-      overflow: hidden;
+    /* .container {
       display: flex;
       flex-direction: column;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      height: 100%;
+      height: 100vh;
     }
 
-.panel {
-  flex: 4;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
+    .header {
+      flex: 1;
+      background: pink;
+      flex-direction: row;
+    }
 
-.panel p {
-  font-size: 40px;
-  color: yellow;
-  font-weight: bold;
-}
-.header {
-  flex: 1;
-  background-color: #DDCEFF;
-  display: flex;
-  flex-direction: row;
- }
+    .box {
+      flex-grow: 1;
+      overflow: auto;
+    } */
 
-.header .link {
-  flex: 2;
-}
+    </style>
 
-.header img {
-  width: 200px;
-  height: 200px;
-  flex 1;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-
-}
-
-
-.gallery {
-   background-color: #D6E1F4;
- }
-
-.nge {
-  background: url(https://pbs.twimg.com/media/DVNmD4VXcAEZfQE?format=jpg&name=medium);
-}
-
-.berserk {
-  background: url(https://wallpaperaccess.com/full/3896663.jpg);
-
-}
-
-.madoka {
-  background: url(https://i0.wp.com/www.nerdophiles.com/wp-content/uploads/2015/05/Witch.png);
-}
-
-</style>
-
-</body>
+  </body>
 </html>
