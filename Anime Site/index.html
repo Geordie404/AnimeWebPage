@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/stylelightbox.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Anime Demo Site</title>
 </head>
@@ -31,11 +32,77 @@
 </div>
 <!---Navbar End--->
 
+
+
 <!---Panels--->
 <section class="box">
   <div class="panel" id="gallery">
-    <h2 class ="title">gallery</h2>
-    <p>dikjijffjs fslkfjslkfjslkdfj lskdjflksjfklsfjsl slkfj</p>
+    <h2>gallery</h2>
+    <!---Lightbox--->
+    <div class="row">
+      <div class="column">
+        <img src="images/shinji.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="images/guts.jpeg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="images/madoka.jpeg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="images/unit01.jpeg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      </div>
+    </div>
+
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img src="images/shinji.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img src="images/guts.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img src="images/madoka.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img src="images/unit01.jpeg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+
+        <div class="column">
+          <img class="demo cursor" src="images/shinji.png" style="width:100%" onclick="currentSlide(1)" alt="Shinji">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/guts.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Guts">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/madoka.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Madoka">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/unit01.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Unit01">
+        </div>
+      </div>
+    </div>
+
+    <!---Lightbox-End-->
+
   </div>
   <div class="panel" id="berserk">
     <h2>berserk</h2>
@@ -49,6 +116,46 @@
 </section>
 <!---Panels End--->
 
+<!---Script--->
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<!---Script-End-->
 
 </body>
 </html>
