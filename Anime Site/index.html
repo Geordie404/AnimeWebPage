@@ -39,73 +39,82 @@
   <div class="panel" id="gallery">
     <h2>gallery</h2>
     <!---Lightbox--->
-    <div class="row">
-      <div class="column">
-        <img src="images/shinji.jpeg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    <div id="lightbox">
+      <div class="row">
+        <div class="column">
+          <img src="images/shinji.jpeg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="images/guts.jpeg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="images/madoka.jpeg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="images/unit01.jpeg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        </div>
       </div>
-      <div class="column">
-        <img src="images/guts.jpeg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+          <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img src="images/shinji.jpeg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img src="images/guts.jpeg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="images/madoka.jpeg" style="width:100%">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="images/unit01.jpeg" style="width:100%">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+
+          <div class="column">
+            <img class="demo cursor" src="images/shinji.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Shinji">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/guts.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Guts">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/madoka.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Madoka">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="images/unit01.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Unit01">
+          </div>
+        </div>
       </div>
-      <div class="column">
-        <img src="images/madoka.jpeg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-      </div>
-      <div class="column">
-        <img src="images/unit01.jpeg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-      </div>
+
+      <!---Lightbox-End-->
     </div>
-
-    <div id="myModal" class="modal">
-      <span class="close cursor" onclick="closeModal()">&times;</span>
-      <div class="modal-content">
-
-        <div class="mySlides">
-          <div class="numbertext">1 / 4</div>
-          <img src="images/shinji.jpeg" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-          <div class="numbertext">2 / 4</div>
-          <img src="images/guts.jpeg" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-          <div class="numbertext">3 / 4</div>
-          <img src="images/madoka.jpeg" style="width:100%">
-        </div>
-
-        <div class="mySlides">
-          <div class="numbertext">4 / 4</div>
-          <img src="images/unit01.jpeg" style="width:100%">
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-        <div class="caption-container">
-          <p id="caption"></p>
-        </div>
-
-
-        <div class="column">
-          <img class="demo cursor" src="images/shinji.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Shinji">
-        </div>
-        <div class="column">
-          <img class="demo cursor" src="images/guts.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Guts">
-        </div>
-        <div class="column">
-          <img class="demo cursor" src="images/madoka.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Madoka">
-        </div>
-        <div class="column">
-          <img class="demo cursor" src="images/unit01.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Unit01">
-        </div>
-      </div>
-    </div>
-
-    <!---Lightbox-End-->
 
   </div>
   <div class="panel" id="berserk">
-    <h2>berserk</h2>
+    <div class="title">
+      <h2>berserk</h2>
+      <img src="images/casca.jpeg" alt="casca">
+    </div>
+    <div class="info">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esseorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esseorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </div>
+
   </div>
   <div class="panel" id="evangelion">
     <h2>evangelion</h2>
